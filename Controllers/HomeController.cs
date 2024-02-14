@@ -11,6 +11,9 @@ public class HomeController : Controller
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
+
+        // Add a log message to the Index action
+        _logger.LogInformation("The Index page has been requested");
     }
 
     public IActionResult Index()
